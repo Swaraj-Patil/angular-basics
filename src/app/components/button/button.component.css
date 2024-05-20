@@ -1,0 +1,13 @@
+.create-button {
+    padding: 14px 20px;
+    width: 400px;
+    border-radius: 6px;
+    border: none;
+    background-color: #EEE;
+    color: #BBB;
+    font-weight: 400;
+    cursor: pointer;
+    text-align: left;
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: 1.2px;
+}
