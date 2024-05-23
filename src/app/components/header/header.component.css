@@ -25,3 +25,10 @@
     align-items: center;
     margin-bottom: 25px;
 }
+
+.header .moon-icon {
+    color: white;
+    font-size: 22px;
+    transform: rotate(-20deg);
+    opacity: .8;
+}

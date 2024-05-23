@@ -6,8 +6,9 @@
     <p>tasks works! {{ task.text }}</p>
 </div> -->
 
-<app-task-item
-    *ngFor="let task of tasks"
-    [task]="task"
-    class="tasks"
-></app-task-item>
+<div class="tasks">
+    <app-task-item
+        *ngFor="let task of tasks"
+        [task]="task"
+    ></app-task-item>
+</div>

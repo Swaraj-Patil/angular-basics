@@ -1,4 +1,7 @@
 <div class="task">
-    <h3>{{ task.text}}</h3>
+    <div>
+        <h3>{{ task.text}}</h3>
+        <fa-icon class="delete-icon" [icon]="deleteIcon"></fa-icon>
+    </div>
     <p>{{ task.day }}</p>
 </div>

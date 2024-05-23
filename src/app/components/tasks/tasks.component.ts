@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
-import { tasks } from '../../mock-tasks'
+// import { tasks } from '../../mock-tasks'
 import { Task } from '../../Types';
 import { CommonModule } from '@angular/common';
 import { TaskItemComponent } from '../task-item/task-item.component';
+import { TaskService } from '../../services/task.service'
 
 @Component({
   selector: 'app-tasks',
@@ -12,5 +13,12 @@ import { TaskItemComponent } from '../task-item/task-item.component';
   styleUrl: './tasks.component.css'
 })
 export class TasksComponent {
-  tasks: Task[] = tasks
+  tasks: Task[] = []
+
+  constructor (private taskService: TaskService) {}
+
+  ngOnInit(): void {
+    this.tasks = this.taskService.getTasks()
+  }
+  
 }
