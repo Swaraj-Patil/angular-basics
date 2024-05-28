@@ -22,5 +22,25 @@ export class TasksComponent {
       this.tasks = tasks
     })
   }
+
+  handleTaskDelete (taskToBeDeleted: Task) {
+    this.taskService.deleteTask(taskToBeDeleted).subscribe(() => {
+      // this.taskService.getTasks().subscribe(tasks => {
+      //   this.tasks = tasks
+      // })
+
+      this.tasks = this.tasks.filter(task => taskToBeDeleted.id != task.id)
+    })
+  }
+
+  handleReminderToggle(taskToBeToggled: Task) {
+    taskToBeToggled.reminder = !taskToBeToggled.reminder
+
+    this.taskService.toggleReminderOfTask(taskToBeToggled).subscribe()
+  }
   
 }
+
+// status: 200 -> success
+// status 201 -> successfully created (POST)
+// status 400, 401, 402

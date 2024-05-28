@@ -10,5 +10,7 @@
     <app-task-item
         *ngFor="let task of tasks"
         [task]="task"
+        (deleteTask)="handleTaskDelete(task)"
+        (toggleReminder)="handleReminderToggle(task)"
     ></app-task-item>
 </div>

@@ -2,9 +2,12 @@
     background-color: #f4F4F4;
     padding: 10px 20px;
     cursor: pointer;
-    border-left: 5px solid green;
     margin-bottom: 1px;
     border-radius: 5px;
+}
+
+.task.taskReminder {
+    border-left: 5px solid green;
 }
 
 .task > div {
