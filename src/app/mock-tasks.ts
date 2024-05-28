@@ -20,3 +20,6 @@ export const tasks: Task[] = [
         reminder: true
     },
 ]
+
+
+// Database => Tasks table

@@ -1,55 +1,51 @@
 import { Injectable } from '@angular/core';
 import { tasks } from '../mock-tasks';
 import { Task } from '../Types';
+import { Observable, of } from 'rxjs';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
 })
 export class TaskService {
+  private taskApiUrl = 'http://localhost:4201/tasks'
 
-  constructor() { }
+  constructor (private http: HttpClient) { }
 
-  getTasks (): Task[] {
-    // Backend API called and data received
-    return tasks
+  getTasks (): Observable<Task[]> {
+    return this.http.get<Task[]>(this.taskApiUrl)
   }
 }
 
 
+// Asynchronous Javascript
 
-// CRUD operation
-// C - Create
-// R - Retrieve
-// U - Update
-// D - Delete
+// Promise VS Observables
+
+// console.log('Initializer')
+// const myPromise = new Promise(resolve => {
+//   setTimeout(() => {
+//     resolve('Ross')
+//     resolve('Joey')
+//   }, 2000)
+// })
 
 
-// javascript
+// myPromise.then(response => {
+//   console.log('Promise', response)
+// })
 
-interface studentType {
-  age: number,
-  name: string
-}
+// const myObservable = new Observable(observer => {
+//   setTimeout(() => {
+//     observer.next('Rachael')
+//     observer.next('Monica')
+//     observer.next('Monica')
+//     observer.next('Monica')
+//     observer.next('Monica')
+//     observer.next('Monica')
+//   }, 3000)
+// })
 
-const students = [
-  {
-    age: 20,
-    name: 'Ross'
-  },
-  {
-    age: 20,
-    name: 'Rachael'
-  },
-  {
-    age: 20,
-    name: 'Monica'
-  },
-  {
-    age: 20,
-    name: 'Joey'
-  },
-]
-
-function sendAllStudentNames (): studentType[] {
-  return students.map(student => student)
-}
+// myObservable.subscribe(response => {
+//   console.log('Observable', response)
+// })
