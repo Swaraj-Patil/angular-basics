@@ -17,6 +17,12 @@
       "text": "Buy Groceries",
       "day": "May 19th at 09:00 AM",
       "reminder": true
+    },
+    {
+      "id": "3617",
+      "text": "Workout",
+      "day": "06:00 PM",
+      "reminder": true
     }
   ]
 }

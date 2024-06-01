@@ -19,8 +19,10 @@
 <div class="app">
     <app-header></app-header>
 
+    <app-add-task (addTask)="handleTaskCreation($event)"></app-add-task>
+
     <div class="tasks-container">
-        <app-tasks></app-tasks>
+        <app-tasks [newTask]="newTask"></app-tasks>
     </div>
 
     <app-footer></app-footer>

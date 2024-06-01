@@ -1,0 +1,47 @@
+.add__task {
+    background-color: indianred;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.add__task .form-control {
+    min-width: 500px;
+}
+
+.add__task .form-control > div {
+    display: flex;
+    align-items: center;
+}
+
+.add__task .form-control > div > label {
+    font-weight: 600;
+    margin-right: 10px;
+    min-width: 140px;
+}
+
+.add__task .form-control > div > input[type='text'] {
+    padding: 10px 16px;
+    outline: none;
+    border-radius: 4px;
+    border: none;
+    margin: 5px 0;
+    width: 100%;
+}
+
+.add__task .form-control > div > input[type='submit'] {
+    padding: 12px 16px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: none;
+    background-color: #000;
+    color: white;
+    letter-spacing: 1.6px;
+    width: 100%;
+    cursor: pointer;
+    transition: 400ms all ease;
+    box-shadow: 1px 1px 4px rgba(0,0,0,0.3);
+}
+.add__task .form-control > div > input[type='submit']:hover {
+    background-color: #222;
+}
