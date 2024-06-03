@@ -23,6 +23,18 @@
       "text": "Workout",
       "day": "06:00 PM",
       "reminder": true
+    },
+    {
+      "id": "c591",
+      "text": "Task from Modal",
+      "day": "Tuesday Eve",
+      "reminder": true
+    },
+    {
+      "id": "e999",
+      "text": "asdas",
+      "day": "asdas",
+      "reminder": false
     }
   ]
 }

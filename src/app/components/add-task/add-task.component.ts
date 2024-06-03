@@ -2,6 +2,7 @@ import { Component, EventEmitter, Output } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { TaskService } from '../../services/task.service';
 import { Task } from '../../Types';
+import { MatDialogRef } from '@angular/material/dialog'
 
 @Component({
   selector: 'app-add-task',
@@ -18,7 +19,10 @@ export class AddTaskComponent {
   day: string
   reminder: boolean = false
 
-  constructor (private taskService: TaskService) {}
+  constructor (
+    private taskService: TaskService,
+    public dialogRef: MatDialogRef<AddTaskComponent>
+  ) {}
 
   onTaskSubmit() {
     if (!this.text) {
@@ -32,7 +36,10 @@ export class AddTaskComponent {
       reminder: this.reminder
     }
 
-    this.taskService.createTask(newTask).subscribe(task => this.addTask.emit(task))
+    this.taskService.createTask(newTask).subscribe(task => {
+      this.addTask.emit(task)
+      this.dialogRef.close(task)
+    })
 
     this.text = ''
     this.day = ''

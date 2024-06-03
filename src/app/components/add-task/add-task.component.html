@@ -1,4 +1,4 @@
-<div class="add__task">
+<div class="add__task" mat-dialog-content>
     <form class="form-control" (ngSubmit)="onTaskSubmit()">
         <div>
             <label for="text">Task:</label>
@@ -33,7 +33,7 @@
         </div>
 
         <div>
-            <input type="submit" value="Add Task">
+            <input mat-button type="submit" value="Add Task">
         </div>
         
     </form>

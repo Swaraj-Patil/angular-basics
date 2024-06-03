@@ -13,5 +13,9 @@
         <fa-icon class="moon-icon" [icon]="moonIcon"></fa-icon>
     </div>
 
-    <app-button text="Create a new task..."></app-button>
+    <app-button 
+        mat-button
+        text="Create a new task..."
+        (customClick)="openDialog()"
+    ></app-button>
 </div>

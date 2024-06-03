@@ -17,9 +17,9 @@
 
 <app-footer></app-footer> -->
 <div class="app">
-    <app-header></app-header>
+    <app-header (taskCreated)="handleTaskCreation($event)"></app-header>
 
-    <app-add-task (addTask)="handleTaskCreation($event)"></app-add-task>
+    <!-- <app-add-task (addTask)="handleTaskCreation($event)"></app-add-task> -->
 
     <div class="tasks-container">
         <app-tasks [newTask]="newTask"></app-tasks>
