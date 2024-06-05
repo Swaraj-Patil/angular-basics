@@ -22,7 +22,8 @@
     <!-- <app-add-task (addTask)="handleTaskCreation($event)"></app-add-task> -->
 
     <div class="tasks-container">
-        <app-tasks [newTask]="newTask"></app-tasks>
+        <!-- <app-tasks [newTask]="newTask"></app-tasks> -->
+        <router-outlet></router-outlet>
     </div>
 
     <app-footer></app-footer>

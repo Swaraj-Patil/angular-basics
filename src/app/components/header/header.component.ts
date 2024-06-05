@@ -5,11 +5,17 @@ import { faMoon } from '@fortawesome/free-solid-svg-icons'
 import { MatDialog } from '@angular/material/dialog';
 import { AddTaskComponent } from '../add-task/add-task.component';
 import { Task } from '../../Types';
+import { RouterLink, RouterLinkActive } from '@angular/router';
 
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [ButtonComponent, FontAwesomeModule],
+  imports: [
+    ButtonComponent, 
+    FontAwesomeModule, 
+    RouterLink, 
+    RouterLinkActive,
+  ],
   templateUrl: './header.component.html',
   styleUrl: './header.component.css'
 })

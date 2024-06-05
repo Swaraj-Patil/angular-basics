@@ -1,4 +1,9 @@
 <div class="add__task" mat-dialog-content>
+    <lib-toastify-toast-container
+        [position]="'top-left'"
+        [iconLibrary]="closeIcon"
+        [transition]="'zoom'"
+    ></lib-toastify-toast-container>
     <form class="form-control" (ngSubmit)="onTaskSubmit()">
         <div>
             <label for="text">Task:</label>

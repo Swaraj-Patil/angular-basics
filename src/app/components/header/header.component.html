@@ -8,6 +8,14 @@
 <app-button></app-button> -->
 
 <div class="header">
+    <nav>
+        <ul>
+            <li><a routerLink="/" routerLinkActive="active">Home</a></li>
+            <li><a routerLink="/about" routerLinkActive="active">About</a></li>
+            <li><a routerLink="/contact" routerLinkActive="active">Contact</a></li>
+        </ul>
+    </nav>
+
     <div>
         <h3>{{ title }}</h3>
         <fa-icon class="moon-icon" [icon]="moonIcon"></fa-icon>

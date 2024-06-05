@@ -10,7 +10,7 @@
       "id": "2",
       "text": "Meeting with Client",
       "day": "May 22nd at 03:00 PM",
-      "reminder": true
+      "reminder": false
     },
     {
       "id": "3",
@@ -29,12 +29,6 @@
       "text": "Task from Modal",
       "day": "Tuesday Eve",
       "reminder": true
-    },
-    {
-      "id": "e999",
-      "text": "asdas",
-      "day": "asdas",
-      "reminder": false
     }
   ]
 }
